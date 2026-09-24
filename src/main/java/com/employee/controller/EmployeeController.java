@@ -70,6 +70,8 @@ public ResponseEntity<EmployeeDto> getEmployeeByEmpCodeAndCompanyName(@RequestPa
     }
 EmployeeDto response = employeeService.getEmployeeByEmpCodeAndCompanyName(empCode, companyName);
     return new ResponseEntity<>(response, HttpStatus.OK);
+
+
 }
 
 }
