@@ -74,7 +74,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     @Override
     public EmployeeDto getEmployeeByEmpCodeAndCompanyName(String empCode, String companyName) {
-       Employee employee= employeeRepository.findByEmpCodeAndCompanyName(empCode, companyName).orElseThrow(() ->
+        Employee employee = employeeRepository.findByEmpCodeAndCompanyName(empCode, companyName).orElseThrow(() ->
                 new ResourceNotFoundException("Employee not  found with empCode :" + empCode + " and companyName: " + companyName));
         return modelMapper.map(employee, EmployeeDto.class);
     }
